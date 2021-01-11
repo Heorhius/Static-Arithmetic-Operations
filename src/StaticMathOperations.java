@@ -17,7 +17,8 @@ public class StaticMathOperations {
         }
 
         int reminder = (int)(absDividend - absDivider * multiplier);
-        double result = multiplier + reminder / absDivider;
+        double partAfterDot  = reminder * Math.pow(divider, -1);
+        double result = multiplier + partAfterDot;
 
         if ((dividend < 0 && divider < 0) || (dividend > 0 && divider > 0)) {
             return result;
